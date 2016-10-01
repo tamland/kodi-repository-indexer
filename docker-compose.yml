@@ -1,0 +1,7 @@
+version: '2'
+services:
+  indexer:
+    build: tamland/kodi-addon-repo-indexer:latest
+    restart: on-failure:3
+    volumes:
+        - ./addons:/var/lib/addons
